@@ -1,21 +1,28 @@
 var cart = [];
 
-function getCart() {
+function getCart() { //fuctions retruns array items in cart
  return cart;
 }
 
-function setCart(c) {
+function setCart(c) { //function
   cart = c;
   return cart;
 }
 
 function addToCart(item) {
- // write your code here
+var price =  Math.floor(Math.random() * 100) + 1;
+ var itemObject = {};
+ itemObject[item] = price;
+ cart.push(itemObject)
+ console.log(item + " has been added to your cart.")
+ return cart
 }
 
 function viewCart() {
-  // write your code here
-}
+ if(cart.length === 0) {
+   console.log("Your shopping cart is empty.");
+ }
+
 
 function total() {
   // write your code here
